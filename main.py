@@ -25,6 +25,7 @@ DASHBOARD_TOPIC = f"projects/{PROJECT_ID}/topics/dashboard-queue"
 # But if needed, you can also instantiate one:
 publisher = pubsub_v1.PublisherClient()
 
+
 def employee_timelog_list(event, context):
     """
     Cloud Function to perform bulk timesheet lookup triggered by a Pub/Sub message.
