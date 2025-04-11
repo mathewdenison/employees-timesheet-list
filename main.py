@@ -6,12 +6,10 @@ import base64
 from google.cloud import pubsub_v1
 from google.cloud import logging as cloud_logging
 
-# Import shared code from your published PyPI package (version 0.0.1)
 from timesheet_common_timesheet_mfdenison_hopkinsep.models import TimeLog
 from timesheet_common_timesheet_mfdenison_hopkinsep.serializers import TimeLogSerializer
 from timesheet_common_timesheet_mfdenison_hopkinsep.utils.dashboard import send_dashboard_update
 
-# Initialize Cloud Logging (logs will be sent to Google Cloud Logging)
 client = cloud_logging.Client()
 client.setup_logging()
 
