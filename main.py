@@ -16,7 +16,6 @@ client.setup_logging()
 logger = logging.getLogger("employee_timelog_list")
 logger.setLevel(logging.INFO)
 
-# Pub/Sub dashboard topic configuration; PROJECT_ID can be provided via environment variables.
 PROJECT_ID = os.environ.get("PROJECT_ID", "hopkinstimesheetproj")
 DASHBOARD_TOPIC = f"projects/{PROJECT_ID}/topics/dashboard-queue"
 # (The publisher is not used directly in this function because we are assuming that send_dashboard_update handles it.)
